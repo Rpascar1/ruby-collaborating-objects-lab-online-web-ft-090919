@@ -1,16 +1,13 @@
 class MP3Importer
   
-  attr_accessor :path, :files, :import
-  
-  
-  
+    attr_accessor :path, :files, :import
+
   def initialize(path)
   @path = path
-  
   end
   
   def files
-    file_check = Dir.entries(@path).select{|file| file.include?("mp3")}
+    Dir.entries(@path).select{|file| file.include?("mp3")}
   end
       
   
